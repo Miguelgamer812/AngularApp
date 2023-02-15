@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Output, OnInit, OnDestroy } from '@angular/core';
+import { IndexService } from '../services/index.service';
 
 @Component({
   selector: 'app-index',
@@ -7,11 +8,16 @@ import { Component, EventEmitter, Output, OnInit, OnDestroy } from '@angular/cor
 })
 export class IndexComponent implements OnInit, OnDestroy {
   
+  pojemon:any;
   Name = "Miguel Arango"
-  constructor() {
+  constructor(private indexService:IndexService) {
 
   }
+
   ngOnInit(): void {
+    this.indexService.getPokemons().subscribe(data => {
+      this.pojemon = data.results;
+    });
     console.log("Entrando");
   }
 

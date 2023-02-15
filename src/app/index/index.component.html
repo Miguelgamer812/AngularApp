@@ -14,6 +14,25 @@
         Ipsum从西元15世纪起就被作为此领域的标准文本使用。它不仅延续了五个世纪，还通过了电子排版的挑战，其雏形却依然保存至今。在1960年代，”Leatraset”公司发布了印刷着Lorem
         Ipsum段落的纸张，从而广泛普及了它的使用。最近，计算机桌面出版软件”Aldus PageMaker”也通过同样的方式使Lorem Ipsum落入大众的视野。<img src="../../assets/img/MicrosoftTeams-image.png" alt="imagen del negro" width="50px" height="50px">
     </p>
+    <div>
+        <ul class="cards">
+            <li *ngFor="let item of pojemon">
+              <a href="" class="card">
+                <img src="https://i.imgur.com/oYiTqum.jpg" class="card__image" alt="" />
+                <div class="card__overlay">
+                  <div class="card__header">
+                    <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                    <img class="card__thumb" src="https://i.imgur.com/7D7I6dI.png" alt="" />
+                    <div class="card__header-text">
+                      <h3 class="card__title">{{ item.name | titlecase }}</h3>
+                    </div>
+                  </div>
+                  <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?</p>
+                </div>
+              </a>      
+            </li> 
+          </ul>
+    </div>
     <div style="width: 2px; height: 2px;"></div>
     <button style="border: none; height: 35px; background-color:black; color:white;"
         onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';"
